@@ -120,11 +120,20 @@
             "id": "6bfcacb8-d131-48e1-9967-0947fbece245",
             "actions": [
                 {
-                    "name": "Look",
+                    "name": "lookM",
                     "type": "Value",
                     "id": "2c537b8e-40a6-43dc-945a-b618dab038ca",
                     "expectedControlType": "Vector2",
-                    "processors": "NormalizeVector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "lookC",
+                    "type": "Value",
+                    "id": "586c1d94-ce29-405c-8c0c-356a75e4d619",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
                 }
@@ -137,18 +146,57 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
+                    "action": "lookM",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "032b3017-4dee-423d-bfd3-da75fb5124e5",
+                    "id": "1a55ef28-e88e-43ed-b62b-9b8ded0d7e67",
                     "path": "<Gamepad>/rightStick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Look",
+                    "action": "lookC",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "etc",
+            "id": "5901550d-54f5-4112-b5a5-2f836df2d7d8",
+            "actions": [
+                {
+                    "name": "menuToggle",
+                    "type": "Button",
+                    "id": "993627ef-fa39-44f6-a924-0f19d4ea5b1e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "55294805-003a-41cd-ba62-c2e718b33168",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "menuToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e701fa2-fb45-4894-b8a4-e7993bf8023e",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "menuToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

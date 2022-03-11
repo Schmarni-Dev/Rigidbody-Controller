@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37da506fa27d2254382283ad875ec4a1, type: 3}
   m_Name: Movement Settings
   m_EditorClassIdentifier: 
-  maxSlopeAngle: 45
+  allowDoubleJump: 1
+  jumpForce: 5
+  maxSlopeAngle: 46
   MaxSpeed: 15
   moveSpeed: 15
   CounterMovement: 10

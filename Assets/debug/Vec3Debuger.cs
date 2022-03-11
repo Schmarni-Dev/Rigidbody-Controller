@@ -19,6 +19,7 @@ public class Vec3Debuger : MonoBehaviour
         {
             arrows[3].gameObject.SetActive(true);
             arrows[3].localRotation =  Quaternion.LookRotation(Vector,transform.up);
+            arrows[3].localScale = helper.setFloatToAll(Vector.magnitude);
         }
         else arrows[3].gameObject.SetActive(false);
     }

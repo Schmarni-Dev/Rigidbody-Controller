@@ -6,6 +6,31 @@ namespace Schmarni
 {
     public static class helper
     {
+        public static Vector3 clampV3(Vector3 _input,float _min,float _max)
+        {
+            return new Vector3(Mathf.Clamp(_input.x,_min,_max),Mathf.Clamp(_input.y,_min,_max),Mathf.Clamp(_input.z,_min,_max));
+        }
+        public static Vector3 eulerToRight(Vector3 _input)
+        {
+            // thanks to Pennywise881 for the function. https://forum.unity.com/threads/what-is-the-math-behind-calculating-transform-forward-of-an-object.521318/
+            float xPos = Mathf.Cos(_input.x * Mathf.Deg2Rad) * Mathf.Cos(_input.y * Mathf.Deg2Rad);
+            float yPos = Mathf.Sin(-_input.y * Mathf.Deg2Rad);
+            float zPos =  Mathf.Sin(-_input.y * Mathf.Deg2Rad) * Mathf.Cos(_input.x * Mathf.Deg2Rad);
+
+            return new Vector3(xPos,yPos,zPos);
+        }
+        public static Vector3 lockRotaition(Vector3 _input)
+        {
+            if (_input.x > 90f && _input.x < 180f)
+            {
+                _input.x = 90;
+            }
+            if (_input.x > 180f && _input.x < 270f)
+            {
+                _input.x = 270;
+            }
+            return _input;
+        }
         public static Vector3 eulerToForward(Vector3 _input)
         {
             // thanks to Pennywise881 for the function. https://forum.unity.com/threads/what-is-the-math-behind-calculating-transform-forward-of-an-object.521318/
@@ -91,5 +116,10 @@ namespace Schmarni
             }
 
         }
+    }
+    public interface IcomponentBehaviour
+    {
+        public void start();
+        public void update();
     }
 }

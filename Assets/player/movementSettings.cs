@@ -7,6 +7,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Movement Settings", menuName = "Schmarni"),Serializable]
 public class movementSettings : ScriptableObject
 {
+    [Tooltip("if the player is allowed to jump")]
+    public bool allowDoubleJump = true;
+    [Tooltip("The Force of a jump")]
+    public float jumpForce = 5f;
     [Tooltip("The Max slope angle of the player")]
     public float maxSlopeAngle = 45f;
     [Tooltip("The Virtual max speed of the player")]
@@ -15,7 +19,6 @@ public class movementSettings : ScriptableObject
     public float moveSpeed = 10f;
     [Tooltip("The counter movement when the player goes to fast")]
     public float CounterMovement = 5f;
-    [Tooltip("")]
     public float counterMovementThreshold = 0.01f;
     [Tooltip("Enable or Disable Airstrafing")]
     public bool Airstrafe = true;
